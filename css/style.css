@@ -1,0 +1,170 @@
+*
+{
+    padding: 0;
+    margin: 0;
+}
+.container
+{
+    position: absolute;
+    top:0;
+    left: 350px;
+    width: 900px;
+    height: 600px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+}
+.title
+{
+    width: 100%;
+    height: 7%;
+    border: 1px solid #ccc;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 40px;
+    background-color: grey;
+}
+.game
+{
+    width: 100%;
+    height: 50%;
+    background: url("../image/lantian.jpg");
+}
+.praise
+{
+    position: absolute;
+    left:0;
+    display: none;
+}
+.grade
+{
+    width: 200px;
+    height: 80px;
+    background-color: green;
+    position: relative;
+    left:700px;
+    top:-210px;
+    font-size: 14px;
+}
+.grade ul li
+{
+    width: 45px;
+    height: 30px;
+    border: 1px solid #ccc;
+}
+.grade .time_name
+{
+    width: 55px;
+}
+.grade .btn
+{
+    position: absolute;
+    top:0;
+    left:-700px;
+    width: 50px;
+    height: 50px;
+    font-size: 12px;
+    border-radius: 50%;
+    line-height: 50px;
+    border: 4px inset yellow;
+    background-color: red;
+}
+.game #bomb
+{
+    position: relative;
+    top:0;
+    left:430px;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 50px;
+    background-color: green;
+    border: 2px solid #ccc;
+   // z-index: -100;
+
+}
+.show
+{
+   // z-index: -1000;
+}
+.table
+{
+    width: 100%;
+    height: 43%;
+    text-align: center;
+    font-weight: bold;
+    border: 1px outset #ccc;
+    z-index: -100;
+}
+ul li
+{
+    list-style: none;
+    width: 47px;
+    height: 30px;
+    float: left;
+    text-align: center;
+    line-height: 30px;
+    border: 2px outset #ccc;
+}
+.one li
+{
+
+    width: 42px;
+    margin: 2px;
+    overflow: hidden;
+
+}
+.second li,.three li, .four li,.five li,.six li
+{
+
+    width: 52px;
+    margin: 2px;
+
+
+}
+.seven-li
+{
+    border: none;
+}
+.seven
+{
+    height: 14px;
+    font-size: 10px;
+    line-height: 14px;
+    border: none;
+}
+
+.seven li
+{
+    height: 14px;
+    line-height: 14px;
+    margin: 0;
+}
+.seven .down
+{
+    border-top:none;
+}
+ul
+{
+    width: 100%;
+    height: 40px;
+    border: 1px solid transparent;
+
+}
+/*table .second*/
+/*{*/
+
+/*}*/
+/*.table td*/
+/*{*/
+    /*width: 2%;*/
+    /*height: 4%;*/
+
+/*}*/
+.enter
+{
+    border:2px outset red;
+    background-color:#fff;
+}

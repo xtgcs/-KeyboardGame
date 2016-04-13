@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>键盘游戏</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+    <div class="title">键盘游戏</div>
+    <div id="game" class="game">
+        <div id="bomb" class="show">H</div>
+        <div id="praise" class="praise">
+            <img src="image/zhuhe.jpg" width="80px" height="80px">
+        </div>
+        <video id="music" src="image/yinyue.mp3" loop></video>
+        <div id="grade" class="grade">
+            <ul>
+                <li class="score_name">命中：</li>
+                <li id="score" class="score"></li>
+                <li class="error_name">脱靶：</li>
+                <li id="error" class="error"></li>
+            </ul>
+            <ul>
+                <li class="level_name">关卡：</li>
+                <li id="level" class="level"></li>
+                <li class="time_name">倒计时:</li>
+                <li id="time" class="time"></li>
+            </ul>
+            <ul>
+                <li class="btn" onclick="getmusic()">音乐开关</li>
+            </ul>
+        </div>
+    </div>
+    <div id="main" class="main">
+        <div class="table">
+            <ul class="one">
+                <li id="li[27]" onclick="hit(27)" style="width: 55px">Esc</li>
+                <li id="li[112]" onclick="hit(112)">F1</li>
+                <li id="li[113]" onclick="hit(113)">F2</li>
+                <li id="li[114]" onclick="hit(114)">F3</li>
+                <li id="li[115]" onclick="hit(115)">F4</li>
+                <li id="li[116]" onclick="hit(116)">F5</li>
+                <li id="li[117]" onclick="hit(117)">F6</li>
+                <li id="li[118]" onclick="hit(118)">F7</li>
+                <li id="li[119]" onclick="hit(119)">F8</li>
+                <li id="li[120]" onclick="hit(120)">F9</li>
+                <li id="li[121]" onclick="hit(121)">F10</li>
+                <li id="li[122]" onclick="hit(122)">F11</li>
+                <li id="li[123]" onclick="hit(123)">F12</li>
+                <li id="li[36]" onclick="hit(36)">Home</li>
+                <li id="li[35]" onclick="hit(35)">End</li>
+                <li id="li[45]" onclick="hit(45)" style="width: 50px">Insert</li>
+                <li id="li[46]" onclick="hit(46)" style="width: 70px">Delete</li>
+            </ul>
+            <ul class="second">
+                <li id="li[192]" onclick="hit(192)">~ `</li>
+                <li id="li[49]" onclick="hit(49)">1</li>
+                <li id="li[50]" onclick="hit(50)">2</li>
+                <li id="li[51]" onclick="hit(51)">3</li>
+                <li id="li[52]" onclick="hit(52)">4</li>
+                <li id="li[53]" onclick="hit(53)">5</li>
+                <li id="li[54]" onclick="hit(54)">6</li>
+                <li id="li[55]" onclick="hit(55)">7</li>
+                <li id="li[56]" onclick="hit(56)">8</li>
+                <li id="li[57]" onclick="hit(57)">9</li>
+                <li id="li[48]" onclick="hit(48)">0</li>
+                <li id="li[189]" onclick="hit(189)">-</li>
+                <li id="li[187]" onclick="hit(187)">+</li>
+                <li id="li[8]" onclick="hit(8)" style="width: 110px">Backspace</li>
+
+            </ul>
+            <ul class="three">
+                <li id="li[9]" onclick="hit(9)" style="width:70px">Tab</li>
+                <li id="li[81]" onclick="hit(81)">Q</li>
+                <li id="li[87]" onclick="hit(87)">W</li>
+                <li id="li[69]" onclick="hit(69)">E</li>
+                <li id="li[82]" onclick="hit(82)">R</li>
+                <li id="li[84]" onclick="hit(84)">T</li>
+                <li id="li[89]" onclick="hit(89)">Y</li>
+                <li id="li[85]" onclick="hit(85)">U</li>
+                <li id="li[73]" onclick="hit(73)">I</li>
+                <li id="li[79]" onclick="hit(79)">O</li>
+                <li id="li[80]" onclick="hit(80)">P</li>
+                <li id="li[219]" onclick="hit(219)">{ [</li>
+                <li id="li[221]" onclick="hit(221)">} ]</li>
+                <li id="li[220]" onclick="hit(220)" style="width:92px">|   \</li>
+            </ul>
+            <ul class="four">
+                <li id="li[20]" onclick="hit(20)" style="width: 85px">CapsLock</li>
+                <li id="li[65]" onclick="hit(65)">A</li>
+                <li id="li[83]" onclick="hit(83)">S</li>
+                <li id="li[68]" onclick="hit(68)">D</li>
+                <li id="li[70]" onclick="hit(70)">F</li>
+                <li id="li[71]" onclick="hit(71)">G</li>
+                <li id="li[72]" onclick="hit(72)">H</li>
+                <li id="li[74]" onclick="hit(74)">J</li>
+                <li id="li[75]" onclick="hit(75)">K</li>
+                <li id="li[76]" onclick="hit(76)">L</li>
+                <li id="li[186]" onclick="hit(186)">: ;</li>
+                <li id="li[222]" onclick="hit(222)">" '</li>
+                <li id="li[13]" onclick="hit(13)" style="width: 136px">Enter</li>
+            </ul>
+            <ul class="five">
+                <li id="li[161]" onclick="hit(16)" style="width: 110px">Shift</li>
+                <li id="li[90]" onclick="hit(90)">Z</li>
+                <li id="li[88]" onclick="hit(88)">X</li>
+                <li id="li[67]" onclick="hit(67)">C</li>
+                <li id="li[86]" onclick="hit(86)">V</li>
+                <li id="li[66]" onclick="hit(66)">B</li>
+                <li id="li[78]" onclick="hit(78)">N</li>
+                <li id="li[77]" onclick="hit(77)">M</li>
+                <li id="li[188]" onclick="hit(188)">< ,</li>
+                <li id="li[190]" onclick="hit(190)">< .</li>
+                <li id="li[191]" onclick="hit(191)">? /</li>
+                <li id="li[16]" onclick="hit(16)" style="width: 171px">Shift</li>
+            </ul>
+            <ul class="six">
+                <li id="li[255]" onclick="hit(255)">Fn</li>
+                <li id="li[17]" onclick="hit(17)" style="width:50px">Ctrl</li>
+                <li id="li[91]" onclick="hit(91)">Win</li>
+                <li id="li[18]" onclick="hit(18)">Alt</li>
+                <li id="li[32]" style="width:292px">空格</li>
+                <li id="li[181]" onclick="hit(181)">Alt</li>
+                <li id="li[]" onclick="hit()">PrtSc</li>
+                <li id="li[171]" onclick="hit(171)">Ctrl</li>
+                <li class="seven-li">
+                    <ul class="seven">
+                        <li id="li[33]" onclick="hit(33)">PgUp</li>
+                    </ul>
+                    <ul class="seven">
+                        <li id="li[37]" onclick="hit(37)" class="down">left</li>
+                    </ul>
+                </li>
+                <li class="seven-li" style="margin:2px 5px  5px">
+                    <ul class="seven">
+                        <li id="li[38]" onclick="hit(38)">up</li>
+                    </ul>
+                    <ul class="seven">
+                        <li id="li[40]" onclick="hit(40)" class="down">down</li>
+                    </ul>
+                </li>
+                <li class="seven-li">
+                    <ul class="seven">
+                        <li id="li[34]" onclick="hit(34)">PgDn</li>
+                    </ul>
+                    <ul class="seven">
+                        <li id="li[39]" onclick="hit(39)" class="down">right</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+<script src="js/index.js" rel="stylesheet"></script>
+</html>
